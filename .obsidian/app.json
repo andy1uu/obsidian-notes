@@ -1,1 +1,8 @@
-{}
+{
+  "promptDelete": false,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "tabSize": 2,
+  "smartIndentList": true,
+  "useTab": false
+}
