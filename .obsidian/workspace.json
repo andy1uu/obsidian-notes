@@ -6,7 +6,6 @@
       {
         "id": "cbfd855d19dcd19b",
         "type": "split",
-        "dimension": 43.50899742930592,
         "children": [
           {
             "id": "43231fc06af254bc",
@@ -52,42 +51,6 @@
           }
         ],
         "direction": "horizontal"
-      },
-      {
-        "id": "3e058be2d97edabd",
-        "type": "tabs",
-        "dimension": 56.49100257069408,
-        "children": [
-          {
-            "id": "eea0fff693c96982",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.pluralsight.com/library/courses/go-language-fundamentals/table-of-contents",
-                "title": "Go Fundamentals | Pluralsight",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Go Fundamentals | Pluralsight"
-            }
-          },
-          {
-            "id": "2c5672b4e51dcc7e",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://app.pluralsight.com/id/?redirectTo=%2Fexplore%2Fcertifications",
-                "title": "Sign In | Pluralsight",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "Sign In | Pluralsight"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -280,20 +243,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2c5672b4e51dcc7e",
+  "active": "5fcf3d4b4fab340d",
   "lastOpenFiles": [
+    "Go/Loop Till Condition/main.go",
+    "Go/Loop Till Condition/go.mod",
+    "Go/Loop Till Condition",
+    "Go/Infinite Loops copy/main.go",
+    "Go/Infinite Loops copy/go.mod",
+    "Go/Infinite Loops copy",
+    "Go/Infinite Loops/main.go",
+    "Go/Infinite Loops/go.mod",
+    "Go/Infinite Loops",
+    "Go/Template copy/main.go",
+    "Go/Template copy/go.mod",
     "Go/Go Pluralsight Notes.md",
-    "Untitled.base",
-    "Go/A Simple Web Service/main.go",
-    "Go/CLI Application/main.go",
-    "Go/Hello World/main.go",
-    "Go/Using Variables and Simple Types/main.go",
-    "Go/Using Variables and Simple Types/go.mod",
-    "Go/Using Variables and Simple Types",
-    "Go/CLI Application/log.txt",
     "Go/CLI Application/image.png",
-    "Go/CLI Application/cliApplication.go",
-    "Go/CLI Application/go.mod",
     "2025-09-20.md",
     "Untitled.canvas",
     "Welcome.md"
