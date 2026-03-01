@@ -767,3 +767,17 @@ fmt.Println("Done!")
 ### Demo: Infinite Loops
 
 [Demo: Infinite Loops](./Infinite%20Loops/main.go)
+
+### Understanding Collection-based Loops
+
+```go
+for key := range collection {…} // if you just want the key/index
+for key, value := range collection {…} // if you want both the key/index and the value
+for value := range collection {…} // if you want only the value
+
+array := [3]int{101, 102, 103}
+for index, value := range array {
+    fmt.Println(index, value)
+}
+fmt.Println("Done!")
+```

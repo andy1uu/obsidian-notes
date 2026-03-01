@@ -243,8 +243,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5fcf3d4b4fab340d",
+  "active": "ad3ca13395e1aa8b",
   "lastOpenFiles": [
+    "2026-03-01.md",
+    "Go/Go Pluralsight Notes.md",
+    "579-23-8128.md",
     "Go/Loop Till Condition/main.go",
     "Go/Loop Till Condition/go.mod",
     "Go/Loop Till Condition",
@@ -255,8 +258,6 @@
     "Go/Infinite Loops/go.mod",
     "Go/Infinite Loops",
     "Go/Template copy/main.go",
-    "Go/Template copy/go.mod",
-    "Go/Go Pluralsight Notes.md",
     "Go/CLI Application/image.png",
     "2025-09-20.md",
     "Untitled.canvas",
