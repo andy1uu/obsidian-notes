@@ -1,5 +1,3 @@
-type Movie = { title: string; director: string; yearReleased: number; streaming: boolean; };
-
 const getAllMovies = () => [
   { title: 'A New Hope', director: 'George Lucas', yearReleased: 1977, streaming: true },
   { title: 'The Empire Strikes Back', director: 'Irvin Kershner', yearReleased: 1980, streaming: true },
@@ -18,7 +16,7 @@ type getTitles = {
  };
 
 const getTitles = (director: string, streaming?: boolean): string[] => {
-  const allMovies: Movie[] = getAllMovies();
+  const allMovies = getAllMovies();
   const searchResults: string[] = [];
 
   if (streaming !== undefined) {

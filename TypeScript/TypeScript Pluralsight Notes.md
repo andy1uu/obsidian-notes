@@ -466,3 +466,205 @@ console.log(newID);
 newID = idGenerator("Jedi", 15);
 console.log(newID);
 ```
+
+## Working with Interfaces
+
+### Understanding an Interface
+
+- Contracts that define types
+- Compiler enforces the contract via type checking
+- Collection of property and method definitions
+- Duck typing
+  - If the object has the shape of the type, it can be used as that type
+
+#### Duck Typing
+
+```ts
+interface Duck {
+    walk: () => void;
+    swim: () => void;
+    quack: () => void;
+}
+
+let probsADuck = {
+    walk: () => console.log("walking like a duck"),
+    swim: () => console.log("swimming like a duck"),
+    quack: () => console.log("quacking like a duck")
+}
+
+function flyOverWater(bird: Duck) { }
+
+flyOverWater(probsADuck); // Works!
+```
+
+#### Defining an interface
+
+- Start with the "interface" keyword
+- List properties with their types
+- Optional properties denoted with a "?"
+- Provide function signatures
+  - No Implementation needed
+
+```ts
+interface Book {
+    id: number;
+    title: string;
+    author: string;
+    pages?: number;
+    markDamaged: (reason: string) => void;
+}
+```
+
+```ts
+interface Movie {
+  title: string,
+  director: string,
+  yearReleased: number,
+  streaming: boolean, 
+  length?: number
+  logReview?: (review:string) => void
+};
+
+const printMovieInfo = (movie: Movie): void => {
+  console.log(`Movie Title: ${movie.title}`);
+  console.log(`Year Released: ${movie.yearReleased}`);
+  console.log(`Director: ${movie.director}`);
+}
+
+
+let myMovie: Movie = {
+  title: "Rogue One",
+  director: "Gareth Edwards",
+  yearReleased: 2016,
+  streaming: true,
+  length: 133,
+  logReview: (review: string) => console.log(`Review: ${review}`)
+}
+
+printMovieInfo(myMovie);
+
+if (myMovie.logReview) {
+  myMovie.logReview("Hi");
+}
+```
+
+### Interfaces for Function Types
+
+```ts
+const createMovieID = (name: string, id: number): string => name + id;
+
+interface StringGenerator {
+    (chars: string, nums: number): string;
+}
+
+let idGenerator: StringGenerator;
+idGenerator = createMovieID;
+```
+
+```ts
+interface ReviewLogger {
+  (review: string): void;
+}
+
+let printReview: ReviewLogger;
+
+printReview = (review: string) => console.log(`Viewer review: ${review}`);
+
+printReview("I want to see it again!");
+```
+
+### Extending Interfaces
+
+```ts
+interface LibraryResource {
+    catalogNumber: number;
+}
+
+interface Book {
+    title: string;
+}
+
+interface Encyclopedia extends LibraryResource, Book {
+    volume: number;
+}
+
+let refBook: Encyclopedia = {
+    catalogNumber: 1234,
+    title: "The Book of Everything",
+    volume: 1
+}
+```
+
+```ts
+interface Person {
+  name: string;
+  email: string;
+}
+
+interface Director extends Person {
+  numMoviesDirected: number;
+}
+
+interface CastMember extends Person {
+  role: string;
+  rehearse: (sceneNumber: number) => void;
+}
+```
+
+### Implementing Interfaces with Classes
+
+```ts
+interface Librarian {
+    doWork: () => void;
+}
+
+class ElementarySchoolLibrarian implements Librarian {
+    doWork() {
+        console.log("Reading to and teaching children…");
+    }
+}
+
+let kidsLibrarian: Librarian = new ElementarySchoolLibrarian();
+
+kidsLibrarian.doWork();
+```
+
+```ts
+interface Person {
+  name: string;
+  email: string;
+}
+
+interface CastMember extends Person {
+  role: string;
+  rehearse: (sceneNumber: number) => void;
+}
+
+class Performer implements CastMember {
+  name: string = "";
+  email: string = "";
+  role: string = "";
+
+  rehearse = (sceneNumber: number): void => {
+    console.log(`${this.name} is rehearsing scene number: ${sceneNumber}`);
+  };
+}
+
+let favoriteCastMember: CastMember = new Performer();
+favoriteCastMember.name = "Daisy";
+favoriteCastMember.rehearse(25);
+```
+
+## Creating and Using Classes
+
+## Organizing Your Code with Modules
+
+## Writing Asynchronous Code
+
+## Creating and Using Generics
+
+## Using Type Declaration Files
+
+## Applying TypeScript Decorators
+
+## Debugging TypeScript Code
